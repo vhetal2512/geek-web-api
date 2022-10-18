@@ -1,0 +1,52 @@
+const mongoose = require('mongoose');
+
+const ProfileDetail=mongoose.Schema({
+        name:{
+            type:String,
+        },
+        companyemail:{
+            type:String,
+        },
+        personalemail:{
+            type:String,
+        },
+        contactno:{
+            type:Number,
+            maxLength:10,
+            minLength:10
+        },
+        userrole:{
+            type:String,
+        },
+        dateofbirth:{
+            type:String,
+        },
+        gender:{
+            type:String,
+        },
+        designation:{
+            type:String,
+        },
+        dateofjoin:{
+            type:String,
+        },
+        address:{
+            type:String,
+        },
+        salary:{
+            type:Number
+        },
+        bankname:{
+            type:String,
+            require:true
+        },
+        accountno:{
+            type:Number,
+            maxlength:12,
+        },
+        ifsccode:{
+            type:String
+        }
+});
+
+module.exports=mongoose.model("tbl_user",ProfileDetail)
